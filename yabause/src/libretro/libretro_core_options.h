@@ -127,6 +127,85 @@ struct retro_core_option_definition option_defs_us[] = {
 
 /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
 
+struct retro_core_option_definition option_defs_chs[] = {
+   {
+      "yabause_frameskip",
+      "跳帧",
+      "启用跳帧，有助于提高性能。",
+      {
+         { "disabled", "禁用" },
+         { "enabled", "启用" },
+         { NULL, NULL},
+      },
+      "disabled"
+   },
+   {
+      "yabause_force_hle_bios",
+      "强制HLE BIOS",
+      "使用风险自负，目前此功能引起的问题比解决的问题多。\n"
+      "须要重新启动。",
+      {
+         { "disabled", "禁用" },
+         { "enabled", "启用" },
+         { NULL, NULL},
+      },
+      "disabled"
+   },
+   {
+      "yabause_addon_cartridge",
+      "扩展卡",
+      "选择扩展类型，须要重新启动。",
+      {
+         { "none", "无" },
+         { "1M_ram", "1M内存卡" },
+         { "4M_ram", "4M内存卡" },
+         { NULL, NULL},
+      },
+      "none"
+   },
+   {
+      "yabause_multitap_port1",
+      "6位扩展卡在插槽1",
+      "在插槽1启用6位扩展卡。",
+      {
+         { "disabled", "禁用" },
+         { "enabled", "启用" },
+         { NULL, NULL},
+      },
+      "disabled"
+   },
+   {
+      "yabause_multitap_port2",
+      "6位扩展卡在插槽2",
+      "在插槽2启用6位扩展卡。",
+      {
+         { "disabled", "禁用" },
+         { "enabled", "启用" },
+         { NULL, NULL},
+      },
+      "disabled"
+   },
+#ifdef HAVE_THREADS
+   {
+      "yabause_numthreads",
+      "线程数",
+      "取决于CPU核心数，改变此值可能提高性能。须要重新启动。",
+      {
+         { "1", NULL },
+         { "2", NULL },
+         { "4", NULL },
+         { "8", NULL },
+         { "16", NULL },
+         { "32", NULL },
+         { NULL, NULL},
+      },
+      "4"
+   },
+#endif
+   { NULL, NULL, NULL, {{0}}, NULL },
+};
+
+
 /* RETRO_LANGUAGE_ESPERANTO */
 
 /* RETRO_LANGUAGE_POLISH */
@@ -235,7 +314,7 @@ struct retro_core_option_definition *option_defs_intl[RETRO_LANGUAGE_LAST] = {
    NULL,           /* RETRO_LANGUAGE_RUSSIAN */
    NULL,           /* RETRO_LANGUAGE_KOREAN */
    NULL,           /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */
-   NULL,           /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
+   option_defs_chs,/* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
    NULL,           /* RETRO_LANGUAGE_ESPERANTO */
    NULL,           /* RETRO_LANGUAGE_POLISH */
    NULL,           /* RETRO_LANGUAGE_VIETNAMESE */
