@@ -131,7 +131,7 @@ struct retro_core_option_definition option_defs_chs[] = {
    {
       "yabause_frameskip",
       "跳帧",
-      "启用跳帧，有助于提高性能。",
+      "启用跳帧，以提高性能。",
       {
          { "disabled", "禁用" },
          { "enabled", "启用" },
@@ -165,8 +165,8 @@ struct retro_core_option_definition option_defs_chs[] = {
    },
    {
       "yabause_multitap_port1",
-      "6位扩展卡在插槽1",
-      "在插槽1启用6位扩展卡。",
+      "插槽1六分插",
+      "在插槽1启用6手柄分插器。",
       {
          { "disabled", "禁用" },
          { "enabled", "启用" },
@@ -176,8 +176,8 @@ struct retro_core_option_definition option_defs_chs[] = {
    },
    {
       "yabause_multitap_port2",
-      "6位扩展卡在插槽2",
-      "在插槽2启用6位扩展卡。",
+      "插槽2六分插",
+      "在插槽2启用6手柄分插器。",
       {
          { "disabled", "禁用" },
          { "enabled", "启用" },
